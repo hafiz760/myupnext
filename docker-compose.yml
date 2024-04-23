@@ -1,0 +1,29 @@
+version: "3"
+services:
+  # tripiphy-admin:
+  #   build:
+  #     context: ./tripiphy-admin
+  #     dockerfile: Dockerfile
+  #   container_name: tripiphy_admin
+  #   ports:
+  #     - "3000:3000"
+  #   volumes:
+  #     - ./tripiphy-admin:/app
+  #   environment:
+  #     - NODE_ENV=development
+  #   stdin_open: true
+  #   tty: true
+  tripiphy-user:
+    build:
+      context: ./tripiphy-user
+      dockerfile: Dockerfile
+    container_name: tripiphy_user
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./tripiphy-user:/app/user
+    environment:
+      - NODE_ENV=development
+    stdin_open: true
+    tty: true
+
