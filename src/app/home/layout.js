@@ -5,7 +5,7 @@ import React from "react";
 
 const DashboardLayout = ({ children }) => {
     return (
-        <React.Fragment>
+        <React.Fragment >
             <TopBar />
             <CategoresHeader />
             {children}
